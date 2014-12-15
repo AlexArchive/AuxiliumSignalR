@@ -17,6 +17,12 @@ namespace AuxiliumSignalR.Client
 
         private async void buttonConnect_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(textBoxUsername.Text))
+            {
+                MessageBox.Show("Enter a username.");
+                return;
+            }
+
             var connection = new HubConnection("http://localhost:8080/signalr");
             serverProxy = connection.CreateHubProxy("AuxiliumHub");
             serverProxy.On<string, string>("AddMessage", MessageReceived);
