@@ -1,17 +1,28 @@
-﻿<section>
-    <div id="test">
-        <form id="connectForm">
-            <input type="text" required pattern=".*\S+.*" placeholder="Username" id="username" />
-            <button id="connectButton">Connect</button>
-        </form>
-    </div>
-    <div>
-        <textarea id="chat" readonly=""></textarea>
-    </div>
-    <form id="messageForm">
-        <input type="text" required placeholder="Message" id="message" disabled="disabled" />
-        <button id="sendButton" disabled="disabled">Send</button>
+﻿<link rel="stylesheet" href="http://bootswatch.com/yeti/bootstrap.min.css" media="all" />
+
+<section class="well container" style="margin-top: 25px;">
+    <fieldset>
+        <legend>Auxilium</legend>
+    </fieldset>
+
+    <form id="connectForm" class="clearfix">
+        <div class="col-md-10 ">
+            <input type="text" required pattern=".*\S+.*" placeholder="Username" id="username" class="form-control"/>
+        </div>
+        <button id="connectButton" class="btn btn-primary col-md-2">Connect</button>
     </form>
+
+    <div class="col-md-10" style="margin-bottom: 1em;">
+        <textarea id="chat" readonly class="form-control" style="resize: none; min-height:400px;"></textarea>
+    </div>
+
+    <form id="messageForm" class="clearfix">
+        <div class="col-md-10">
+            <input type="text" required placeholder="Message" id="message" disabled="disabled" class="form-control" />
+        </div>
+        <button id="sendButton" disabled="disabled" class="btn btn-primary col-md-2">Send</button>
+    </form>
+
 </section>
 
 <script src="Scripts/jquery-2.1.1.min.js"></script>
