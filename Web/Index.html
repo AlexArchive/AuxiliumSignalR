@@ -1,7 +1,9 @@
 ﻿<section>
     <div id="test">
-        <input type="text" placeholder="Username" id="username" />
-        <button id="connectButton">Connect</button>
+        <form id="connectForm">
+            <input type="text" required pattern=".*\S+.*" placeholder="Username" id="username" />
+            <button id="connectButton">Connect</button>
+        </form>
     </div>
     <div>
         <textarea id="chat" readonly=""></textarea>

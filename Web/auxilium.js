@@ -6,7 +6,9 @@
         $("#chat").append(username + ": " + message);
     };
 
-    $("#connectButton").click(function () {
+    $("#connectForm").submit(function (event) {
+        event.preventDefault();
+
         $("#connectButton").attr("disabled", "disabled");
         $("#username").attr("disabled", "disabled");
         $.connection.hub.start().done(function () {
