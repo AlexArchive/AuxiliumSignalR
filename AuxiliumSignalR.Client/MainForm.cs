@@ -13,19 +13,25 @@ namespace AuxiliumSignalR.Client
             InitializeComponent();
         }
 
-        private async void buttonConnect_Click(object sender, System.EventArgs e)
+        private async void buttonConnect_Click(object sender, EventArgs e)
         {
             var connection = new HubConnection("http://localhost:8080/signalr");
             serverProxy = connection.CreateHubProxy("AuxiliumHub");
-            serverProxy.On<string, string>("AddMessage", (username, message) =>
-                Invoke(new Action(() => textBoxChat.Text += username + ": " + message)));
+            serverProxy.On<string, string>("AddMessage", MessageReceived);
             await connection.Start();
 
-            panel2.Enabled = false;
-            panel1.Enabled = true;
+            panelAuth.Enabled = false;
+            panelChat.Enabled = true;
         }
 
-        private void buttonSend_Click(object sender, System.EventArgs e)
+        private void MessageReceived(string username, string message)
+        {
+            Invoke(new Action(() =>
+                textBoxChat.Text += username + ": " + message));
+        }
+
+
+        private void buttonSend_Click(object sender, EventArgs e)
         {
             serverProxy.Invoke("Broadcast", 
                 textBoxUsername.Text, 

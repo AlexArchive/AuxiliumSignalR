@@ -9,7 +9,7 @@ namespace AuxiliumSignalR.Sever
         private static void Main()
         {
             WebApp.Start("http://localhost:8080");
-            Console.WriteLine("Server started");
+            Console.WriteLine("Server started..");
             Process.GetCurrentProcess().WaitForExit();
         }
     }
