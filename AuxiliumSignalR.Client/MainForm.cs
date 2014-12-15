@@ -77,7 +77,10 @@ namespace Auxilium.WindowsClient
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            hubConnection.Dispose();
+            if (hubConnection != null)
+            {
+                hubConnection.Dispose();
+            }
         }
     }
 }
