@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net.Http;
+using System.Runtime.Remoting.Messaging;
 using System.Windows.Forms;
 using Microsoft.AspNet.SignalR.Client;
 
@@ -18,7 +20,16 @@ namespace AuxiliumSignalR.Client
             var connection = new HubConnection("http://localhost:8080/signalr");
             serverProxy = connection.CreateHubProxy("AuxiliumHub");
             serverProxy.On<string, string>("AddMessage", MessageReceived);
-            await connection.Start();
+
+            try
+            {
+                await connection.Start();
+            }
+            catch (HttpRequestException)
+            {
+                MessageBox.Show("Unable to connect to the server.");
+                return;
+            }
 
             panelAuth.Enabled = false;
             panelChat.Enabled = true;
