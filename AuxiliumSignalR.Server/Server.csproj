@@ -7,8 +7,8 @@
     <ProjectGuid>{4E1FB493-7D34-4F6D-AB5E-1F66DD22E31E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AuxiliumSignalR.Sever</RootNamespace>
-    <AssemblyName>AuxiliumSignalR.Sever</AssemblyName>
+    <RootNamespace>Auxilium.Sever</RootNamespace>
+    <AssemblyName>Auxilium.Sever</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

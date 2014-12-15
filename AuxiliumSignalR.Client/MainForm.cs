@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Windows.Forms;
 using Microsoft.AspNet.SignalR.Client;
 
-namespace AuxiliumSignalR.Client
+namespace Auxilium.WindowsClient
 {
     public partial class MainForm : Form
     {

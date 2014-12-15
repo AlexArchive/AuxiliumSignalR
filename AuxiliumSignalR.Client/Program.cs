@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace AuxiliumSignalR.Client
+namespace Auxilium.WindowsClient
 {
     static class Program
     {

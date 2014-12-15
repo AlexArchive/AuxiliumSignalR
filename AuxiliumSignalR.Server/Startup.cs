@@ -2,9 +2,9 @@
 using Microsoft.Owin.Cors;
 using Owin;
 
-[assembly: OwinStartup(typeof(AuxiliumSignalR.Sever.Startup))]
+[assembly: OwinStartup(typeof(Auxilium.Sever.Startup))]
 
-namespace AuxiliumSignalR.Sever
+namespace Auxilium.Sever
 {
     public class Startup
     {

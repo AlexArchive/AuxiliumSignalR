@@ -7,8 +7,8 @@
     <ProjectGuid>{25A70648-2F0C-4902-8343-56539658F931}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AuxiliumSignalR.Client</RootNamespace>
-    <AssemblyName>AuxiliumSignalR.Client</AssemblyName>
+    <RootNamespace>Auxilium.WindowsClient</RootNamespace>
+    <AssemblyName>Auxilium.WindowsClient</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

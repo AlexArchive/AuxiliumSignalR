@@ -1,4 +1,4 @@
-﻿namespace AuxiliumSignalR.Client
+﻿namespace Auxilium.WindowsClient
 {
     partial class MainForm
     {

@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Reflection;
 using Microsoft.Owin.Hosting;
 
-namespace AuxiliumSignalR.Sever
+namespace Auxilium.Sever
 {
     class Program
     {

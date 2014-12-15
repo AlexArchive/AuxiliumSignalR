@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNet.SignalR;
 
-namespace AuxiliumSignalR.Sever
+namespace Auxilium.Sever
 {
     public class AuxiliumHub : Hub
     {
