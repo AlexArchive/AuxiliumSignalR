@@ -4,7 +4,7 @@
 
     auxilium.client.addMessage = function (username, message) {
         $("#chat").append(username + ": " + message);
-    };
+    };111
 
     $("#connectForm").submit(function (event) {
         event.preventDefault();
@@ -14,6 +14,7 @@
         $.connection.hub.start().done(function () {
             $("#sendButton").removeAttr("disabled");
             $("#message").removeAttr("disabled");
+            $("#message").focus();
             $("#sendButton").click(function () {
                 auxilium.server.broadcast(
                     $("#username").val(),
