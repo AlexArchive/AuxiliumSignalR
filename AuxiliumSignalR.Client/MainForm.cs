@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 using Microsoft.AspNet.SignalR.Client;
 
 namespace AuxiliumSignalR.Client
@@ -16,6 +17,8 @@ namespace AuxiliumSignalR.Client
         {
             var connection = new HubConnection("http://localhost:8080/signalr");
             serverProxy = connection.CreateHubProxy("AuxiliumHub");
+            serverProxy.On<string>("AddMessage", message =>
+                Invoke(new Action(() => textBox1.Text += message)));
             await connection.Start();
         }
 

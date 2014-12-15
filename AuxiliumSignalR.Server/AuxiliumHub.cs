@@ -8,6 +8,7 @@ namespace AuxiliumSignalR.Sever
     {
         public void Broadcast(string message)
         {
+            Clients.All.addMessage(message);
             Console.WriteLine("Received: " + message);
         }
 
