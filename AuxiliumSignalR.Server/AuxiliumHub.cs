@@ -6,6 +6,11 @@ namespace AuxiliumSignalR.Sever
 {
     public class AuxiliumHub : Hub
     {
+        public void Broadcast(string message)
+        {
+            Console.WriteLine("Received: " + message);
+        }
+
         public override Task OnConnected()
         {
             Console.WriteLine("Client connected: " + Context.ConnectionId);
