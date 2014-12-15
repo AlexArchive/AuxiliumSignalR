@@ -58,22 +58,22 @@
             this.textBoxChat.Multiline = true;
             this.textBoxChat.Name = "textBoxChat";
             this.textBoxChat.ReadOnly = true;
-            this.textBoxChat.Size = new System.Drawing.Size(535, 478);
+            this.textBoxChat.Size = new System.Drawing.Size(421, 478);
             this.textBoxChat.TabIndex = 6;
             // 
             // textBoxMessage
             // 
             this.textBoxMessage.Location = new System.Drawing.Point(75, 499);
             this.textBoxMessage.Name = "textBoxMessage";
-            this.textBoxMessage.Size = new System.Drawing.Size(442, 22);
+            this.textBoxMessage.Size = new System.Drawing.Size(421, 22);
             this.textBoxMessage.TabIndex = 5;
             this.textBoxMessage.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxMessage_KeyDown);
             // 
             // buttonSend
             // 
-            this.buttonSend.Location = new System.Drawing.Point(523, 499);
+            this.buttonSend.Location = new System.Drawing.Point(502, 499);
             this.buttonSend.Name = "buttonSend";
-            this.buttonSend.Size = new System.Drawing.Size(87, 22);
+            this.buttonSend.Size = new System.Drawing.Size(108, 22);
             this.buttonSend.TabIndex = 4;
             this.buttonSend.Text = "Send";
             this.buttonSend.UseVisualStyleBackColor = true;
