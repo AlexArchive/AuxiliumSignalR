@@ -74,5 +74,10 @@ namespace AuxiliumSignalR.Client
                 textBoxMessage.Clear();
             }));
         }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            hubConnection.Dispose();
+        }
     }
 }

@@ -131,6 +131,7 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Auxilium";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.panelChat.ResumeLayout(false);
             this.panelChat.PerformLayout();
             this.panelAuth.ResumeLayout(false);
