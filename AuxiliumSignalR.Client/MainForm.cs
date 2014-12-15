@@ -17,14 +17,17 @@ namespace AuxiliumSignalR.Client
         {
             var connection = new HubConnection("http://localhost:8080/signalr");
             serverProxy = connection.CreateHubProxy("AuxiliumHub");
-            serverProxy.On<string>("AddMessage", message =>
-                Invoke(new Action(() => textBox1.Text += message)));
+            serverProxy.On<string, string>("AddMessage", (username, message) =>
+                Invoke(new Action(() => textBoxChat.Text += username + ": " + message)));
             await connection.Start();
+
+            panel2.Enabled = false;
+            panel1.Enabled = true;
         }
 
         private void buttonSend_Click(object sender, System.EventArgs e)
         {
-            serverProxy.Invoke("Broadcast", textBoxMessage.Text);
+            serverProxy.Invoke("Broadcast", textBoxUsername.Text, textBoxMessage.Text);
         }
     }
 }

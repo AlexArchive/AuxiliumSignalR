@@ -28,86 +28,127 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonConnect = new System.Windows.Forms.Button();
-            this.buttonSend = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxChat = new System.Windows.Forms.TextBox();
             this.textBoxMessage = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.buttonSend = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.buttonConnect = new System.Windows.Forms.Button();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // buttonConnect
+            // panel1
             // 
-            this.buttonConnect.Location = new System.Drawing.Point(12, 12);
-            this.buttonConnect.Name = "buttonConnect";
-            this.buttonConnect.Size = new System.Drawing.Size(75, 23);
-            this.buttonConnect.TabIndex = 0;
-            this.buttonConnect.Text = "Connect";
-            this.buttonConnect.UseVisualStyleBackColor = true;
-            this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
+            this.panel1.Controls.Add(this.textBoxChat);
+            this.panel1.Controls.Add(this.textBoxMessage);
+            this.panel1.Controls.Add(this.buttonSend);
+            this.panel1.Enabled = false;
+            this.panel1.Location = new System.Drawing.Point(12, 65);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(630, 549);
+            this.panel1.TabIndex = 7;
+            // 
+            // textBoxChat
+            // 
+            this.textBoxChat.BackColor = System.Drawing.Color.White;
+            this.textBoxChat.Location = new System.Drawing.Point(75, 15);
+            this.textBoxChat.Multiline = true;
+            this.textBoxChat.Name = "textBoxChat";
+            this.textBoxChat.ReadOnly = true;
+            this.textBoxChat.Size = new System.Drawing.Size(535, 478);
+            this.textBoxChat.TabIndex = 6;
+            // 
+            // textBoxMessage
+            // 
+            this.textBoxMessage.Location = new System.Drawing.Point(75, 499);
+            this.textBoxMessage.Multiline = true;
+            this.textBoxMessage.Name = "textBoxMessage";
+            this.textBoxMessage.Size = new System.Drawing.Size(442, 39);
+            this.textBoxMessage.TabIndex = 5;
             // 
             // buttonSend
             // 
-            this.buttonSend.Location = new System.Drawing.Point(380, 41);
+            this.buttonSend.Location = new System.Drawing.Point(523, 499);
             this.buttonSend.Name = "buttonSend";
-            this.buttonSend.Size = new System.Drawing.Size(75, 23);
-            this.buttonSend.TabIndex = 1;
+            this.buttonSend.Size = new System.Drawing.Size(87, 39);
+            this.buttonSend.TabIndex = 4;
             this.buttonSend.Text = "Send";
             this.buttonSend.UseVisualStyleBackColor = true;
             this.buttonSend.Click += new System.EventHandler(this.buttonSend_Click);
             // 
-            // textBoxMessage
+            // panel2
             // 
-            this.textBoxMessage.Location = new System.Drawing.Point(12, 41);
-            this.textBoxMessage.Multiline = true;
-            this.textBoxMessage.Name = "textBoxMessage";
-            this.textBoxMessage.Size = new System.Drawing.Size(362, 23);
-            this.textBoxMessage.TabIndex = 2;
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.buttonConnect);
+            this.panel2.Controls.Add(this.textBoxUsername);
+            this.panel2.Location = new System.Drawing.Point(12, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(630, 47);
+            this.panel2.TabIndex = 8;
             // 
-            // textBox1
+            // label2
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 96);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(440, 343);
-            this.textBox1.TabIndex = 3;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(8, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Username:";
             // 
-            // label1
+            // buttonConnect
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 80);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Chatroom:";
+            this.buttonConnect.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonConnect.Location = new System.Drawing.Point(502, 15);
+            this.buttonConnect.Name = "buttonConnect";
+            this.buttonConnect.Size = new System.Drawing.Size(108, 22);
+            this.buttonConnect.TabIndex = 7;
+            this.buttonConnect.Text = "Connect";
+            this.buttonConnect.UseVisualStyleBackColor = true;
+            this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
+            // 
+            // textBoxUsername
+            // 
+            this.textBoxUsername.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUsername.Location = new System.Drawing.Point(75, 15);
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.Size = new System.Drawing.Size(421, 22);
+            this.textBoxUsername.TabIndex = 8;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(467, 473);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBoxMessage);
-            this.Controls.Add(this.buttonSend);
-            this.Controls.Add(this.buttonConnect);
+            this.ClientSize = new System.Drawing.Size(652, 639);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Auxilium";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button buttonConnect;
-        private System.Windows.Forms.Button buttonSend;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox textBoxChat;
         private System.Windows.Forms.TextBox textBoxMessage;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonSend;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonConnect;
+        private System.Windows.Forms.TextBox textBoxUsername;
     }
 }
 
