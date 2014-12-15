@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Reflection;
 using Microsoft.Owin.Hosting;
 
 namespace AuxiliumSignalR.Sever
@@ -8,7 +9,16 @@ namespace AuxiliumSignalR.Sever
     {
         private static void Main()
         {
-            WebApp.Start("http://localhost:8080");
+            try
+            {
+                WebApp.Start("http://localhost:8080");
+            }
+            catch (TargetInvocationException)
+            {
+                Console.WriteLine("You are already running a server. Noob.");
+                return;
+            }
+
             Console.WriteLine("Server started..");
             Process.GetCurrentProcess().WaitForExit();
         }
