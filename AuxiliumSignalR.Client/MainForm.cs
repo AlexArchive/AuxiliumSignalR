@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Net.Http;
-using System.Runtime.Remoting.Messaging;
 using System.Windows.Forms;
 using Microsoft.AspNet.SignalR.Client;
 
@@ -9,6 +8,7 @@ namespace AuxiliumSignalR.Client
     public partial class MainForm : Form
     {
         private IHubProxy serverProxy;
+        private HubConnection hubConnection;
 
         public MainForm()
         {
@@ -23,13 +23,14 @@ namespace AuxiliumSignalR.Client
                 return;
             }
 
-            var connection = new HubConnection("http://localhost:8080/signalr");
-            serverProxy = connection.CreateHubProxy("AuxiliumHub");
+            hubConnection = new HubConnection("http://localhost:8080/signalr");
+            hubConnection.Error += Connection_Error;
+            serverProxy = hubConnection.CreateHubProxy("AuxiliumHub");
             serverProxy.On<string, string>("AddMessage", MessageReceived);
 
             try
             {
-                await connection.Start();
+                await hubConnection.Start();
             }
             catch (HttpRequestException)
             {
@@ -60,6 +61,18 @@ namespace AuxiliumSignalR.Client
         {
             if (e.KeyCode == Keys.Enter)
                 buttonSend.PerformClick();
+        }
+
+        private void Connection_Error(Exception obj)
+        {
+            MessageBox.Show("Connection lost. Please connect again.");
+            Invoke(new Action(() =>
+            {
+                panelAuth.Enabled = true;
+                panelChat.Enabled = false;
+                textBoxChat.Clear();
+                textBoxMessage.Clear();
+            }));
         }
     }
 }
