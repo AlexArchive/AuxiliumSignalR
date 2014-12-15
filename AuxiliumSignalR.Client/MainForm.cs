@@ -27,7 +27,16 @@ namespace AuxiliumSignalR.Client
 
         private void buttonSend_Click(object sender, System.EventArgs e)
         {
-            serverProxy.Invoke("Broadcast", textBoxUsername.Text, textBoxMessage.Text);
+            serverProxy.Invoke("Broadcast", 
+                textBoxUsername.Text, 
+                textBoxMessage.Text += Environment.NewLine);
+            textBoxMessage.Clear();
+        }
+
+        private void textBoxMessage_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                buttonSend.PerformClick();
         }
     }
 }
